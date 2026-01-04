@@ -5,6 +5,7 @@ using static CodingFlow.FluentValidation.Validations;
 
 namespace Examples;
 
+// begin-snippet: VogenExample
 [ValueObject]
 public readonly partial struct Age
 {
@@ -15,3 +16,4 @@ public readonly partial struct Age
             .VogenResult();
     }
 }
+// end-snippet
