@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using CodingFlow.FluentValidation.Validators;
+using FluentAssertions;
 using static CodingFlow.FluentValidation.Validations;
 
 namespace CodingFlow.FluentValidation.UnitTests;

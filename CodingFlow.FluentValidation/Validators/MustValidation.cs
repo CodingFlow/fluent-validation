@@ -1,4 +1,4 @@
-﻿namespace CodingFlow.FluentValidation;
+﻿namespace CodingFlow.FluentValidation.Validators;
 
 public static class MustValidation
 {

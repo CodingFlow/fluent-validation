@@ -1,8 +1,8 @@
 ﻿using System.Numerics;
 
-namespace CodingFlow.FluentValidation;
+namespace CodingFlow.FluentValidation.Validators;
 
-public static class BetweenInclusiveValidation
+public static class BetweenInclusiveValidator
 {
     public static FluentValidation<T> BetweenInclusive<T>(this FluentValidation<T> validation, T minimum, T maximum)
         where T : INumber<T>
