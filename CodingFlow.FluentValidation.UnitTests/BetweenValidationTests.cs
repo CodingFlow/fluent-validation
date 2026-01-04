@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using System.ComponentModel.DataAnnotations;
+using FluentAssertions;
 using static CodingFlow.FluentValidation.Validations;
 
 namespace CodingFlow.FluentValidation.UnitTests;
@@ -46,7 +47,7 @@ public class BetweenValidationTests
         {
             IsValid = false,
             Errors = [
-                new() { Message = $"Value Object of type System.Int32 value '{input}' is not between {minimum} and {maximum}."}
+                new() { Message = $"Value '{input}' of type System.Int32 is not between {minimum} and {maximum}."}
             ]
         });
     }
@@ -64,7 +65,7 @@ public class BetweenValidationTests
         {
             IsValid = false,
             Errors = [
-                new() { Message = $"Value Object of type System.Single value '{input}' is not between {minimum} and {maximum}."}
+                new() { Message = $"Value '{input}' of type System.Single is not between {minimum} and {maximum}."}
             ]
         });
     }

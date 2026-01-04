@@ -50,7 +50,7 @@ public class BetweenInclusiveValidationTests
         {
             IsValid = false,
             Errors = [
-                new() { Message = $"Value Object of type System.Int32 value '{input}' is not equal to or between {minimum} and {maximum}."}
+                new() { Message = $"Value '{input}' of type System.Int32 is not equal to or between {minimum} and {maximum}."}
             ]
         });
     }
@@ -68,7 +68,7 @@ public class BetweenInclusiveValidationTests
         {
             IsValid = false,
             Errors = [
-                new() { Message = $"Value Object of type System.Single value '{input}' is not equal to or between {minimum} and {maximum}."}
+                new() { Message = $"Value '{input}' of type System.Single is not equal to or between {minimum} and {maximum}."}
             ]
         });
     }

@@ -25,6 +25,6 @@ public class VogenValidationsTests
             .VogenResult();
 
         result.Should().BeEquivalentTo(
-            Vogen.Validation.Invalid($"Value Object of type System.Single value '{input}' is not between {minimum} and {maximum}."));
+            Vogen.Validation.Invalid($"Value '{input}' of type System.Single is not between {minimum} and {maximum}."));
     }
 }

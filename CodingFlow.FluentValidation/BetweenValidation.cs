@@ -25,7 +25,7 @@ public static class BetweenValidation
             validation.Result.IsValid = false;
 
             validation.Errors.Add(
-                new ValidationError($"Value Object of type {typeof(T)} value '{validation.Input}' is not between {minimum} and {maximum}."));
+                new ValidationError($"Value '{validation.Input}' of type {typeof(T)} is not between {minimum} and {maximum}."));
         }
     }
 }
