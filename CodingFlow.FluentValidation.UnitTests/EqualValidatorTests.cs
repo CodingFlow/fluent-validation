@@ -22,7 +22,7 @@ public class EqualValidatorTests
 
     [TestCase(5f, 20f)]
     [TestCase("some string", "another string")]
-    public void EqualInvalid<T>(T input, T otherInput)
+    public void Equal_Invalid<T>(T input, T otherInput)
     {
         var result = RuleFor(input)
             .Equal(otherInput)

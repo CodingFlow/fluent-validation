@@ -16,7 +16,7 @@ public static class BetweenExclusiveValidator
         where T : INumber<T>
     {
         validation.Validate(
-            () => minimum < validation.Input && validation.Input < maximum,
+            validation => minimum < validation.Input && validation.Input < maximum,
             new ValidationError($"Value '{validation.Input}' of type {typeof(T)} is not between {minimum} and {maximum}.")
         );
     }

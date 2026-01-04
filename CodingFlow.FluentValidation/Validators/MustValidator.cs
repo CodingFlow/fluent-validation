@@ -12,7 +12,7 @@ public static class MustValidator
     private static void Validate<T>(FluentValidation<T> validation, Func<T, bool> predicate)
     {
         validation.Validate(
-            () => predicate(validation.Input),
+            validation => predicate(validation.Input),
             new ValidationError($"Value '{validation.Input}' of type {typeof(T)} is not valid.")
         );
     }

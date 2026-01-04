@@ -27,9 +27,9 @@ public class FluentValidation<T>
         Errors.Add(error);
     }
 
-    public void Validate(Func<bool> validator, ValidationError error)
+    public void Validate(Func<FluentValidation<T>, bool> validator, ValidationError error)
     {
-        if (validator())
+        if (validator(this))
         {
             AddValid();
         }

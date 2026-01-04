@@ -9,7 +9,7 @@ public static class TestValidators
         public FluentValidation<T> Valid()
         {
             validation.Validate(
-                () => true,
+                _ => true,
                 new() { Message = ErrorMessage }
             );
 
@@ -19,7 +19,7 @@ public static class TestValidators
         public FluentValidation<T> Invalid()
         {
             validation.Validate(
-                () => false,
+                _ => false,
                 new() { Message = ErrorMessage }
             );
 
