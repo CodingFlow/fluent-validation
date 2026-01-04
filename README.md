@@ -120,6 +120,22 @@ RuleFor(input)
 <sup><a href='/Examples/MustBasicExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-MustBasicExample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
+# Customizing
+
+## Custom Error Messages
+
+The `WithMessage` method can be used to change the validation error message for a validator.
+
+<!-- snippet: WithMessageBasicExample -->
+<a id='snippet-WithMessageBasicExample'></a>
+```cs
+RuleFor(input)
+    .Equal(8).WithMessage("The two numbers are not equal.")
+.Result();
+```
+<sup><a href='/Examples/WithMessageBasicExample.cs#L13-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-WithMessageBasicExample' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
 # Integrations
 
 ## Vogen

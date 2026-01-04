@@ -53,6 +53,14 @@ The predicate (aka `Must`) validator allows you to provide your own validation l
 
 snippet: MustBasicExample
 
+# Customizing
+
+## Custom Error Messages
+
+The `WithMessage` method can be used to change the validation error message for a validator.
+
+snippet: WithMessageBasicExample
+
 # Integrations
 
 ## Vogen
