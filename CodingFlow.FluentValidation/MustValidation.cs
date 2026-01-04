@@ -2,14 +2,11 @@
 
 public static class MustValidation
 {
-    extension<T>(FluentValidation<T> validation)
+    public static FluentValidation<T> Must<T>(this FluentValidation<T> validation, Func<T, bool> predicate)
     {
-        public FluentValidation<T> Must(Func<T, bool> predicate)
-        {
-            Validate(validation, predicate);
+        Validate(validation, predicate);
 
-            return validation;
-        }
+        return validation;
     }
 
     private static void Validate<T>(FluentValidation<T> validation, Func<T, bool> predicate)

@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace CodingFlow.FluentValidation;
+﻿namespace CodingFlow.FluentValidation;
 
 public class FluentValidation<T>
 {

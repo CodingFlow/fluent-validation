@@ -7,24 +7,21 @@ public static class Validations
         return new FluentValidation<R>(input);
     }
 
-    extension<R>(FluentValidation<R> validation)
+    public static FluentValidation<R> RuleFor<R>(this FluentValidation<R> validation, R input)
     {
-        public FluentValidation<R> RuleFor(R input)
+        var newValidation = new FluentValidation<R>(input)
         {
-            var newValidation = new FluentValidation<R>(input)
-            {
-                Result = validation.Result,
-                Errors = validation.Errors
-            };
+            Result = validation.Result,
+            Errors = validation.Errors
+        };
 
-            return newValidation;
-        }
+        return newValidation;
+    }
 
-        public ValidationResult Result()
-        {
-            validation.Result.Errors = validation.Errors;
+    public static ValidationResult Result<R>(this FluentValidation<R> validation)
+    {
+        validation.Result.Errors = validation.Errors;
 
-            return validation.Result;
-        }
+        return validation.Result;
     }
 }

@@ -2,13 +2,10 @@
 
 public static class WithExtensions
 {
-    extension<T>(FluentValidation<T> validation)
+    public static FluentValidation<T> WithMessage<T>(this FluentValidation<T> validation, string message)
     {
-        public FluentValidation<T> WithMessage(string message)
-        {
-            validation.ChangeErrorMessage(message);
+        validation.ChangeErrorMessage(message);
 
-            return validation;
-        }
+        return validation;
     }
 }

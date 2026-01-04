@@ -4,15 +4,12 @@ namespace CodingFlow.FluentValidation;
 
 public static class BetweenExclusiveValidation
 {
-
-    extension<T>(FluentValidation<T> validation) where T : INumber<T>
+    public static FluentValidation<T> BetweenExclusive<T>(this FluentValidation<T> validation, T minimum, T maximum)
+        where T : INumber<T>
     {
-        public FluentValidation<T> BetweenExclusive(T minimum, T maximum)
-        {
-            Validate(validation, minimum, maximum);
+        Validate(validation, minimum, maximum);
 
-            return validation;
-        }
+        return validation;
     }
 
     private static void Validate<T>(FluentValidation<T> validation, T minimum, T maximum)
