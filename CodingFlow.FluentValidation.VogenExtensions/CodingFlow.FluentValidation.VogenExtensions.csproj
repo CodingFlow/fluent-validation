@@ -11,7 +11,7 @@
 	  <PackageProjectUrl></PackageProjectUrl>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
 	  <RepositoryUrl>https://github.com/CodingFlow/fluent-validation</RepositoryUrl>
-	  <PackageTags>fluent;validation</PackageTags>
+	  <PackageTags>fluent;validation;vogen</PackageTags>
 	  <PackageReleaseNotes>
 		  0.1.0
 		  Initial release.
