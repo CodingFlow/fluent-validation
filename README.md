@@ -24,3 +24,9 @@ var result = RuleFor(input)
 bool isValid = result.IsValid;
 var errors = result.Errors;
 ```
+
+# Integrations
+
+## Vogen
+
+Install the Vogen extensions nuget package, `CodingFlow.FluentValidation.VogenExtensions`
