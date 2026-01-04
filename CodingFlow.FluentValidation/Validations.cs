@@ -13,7 +13,8 @@ public static class Validations
         {
             var newValidation = new FluentValidation<R>(input)
             {
-                Result = validation.Result
+                Result = validation.Result,
+                Errors = validation.Errors
             };
 
             return newValidation;

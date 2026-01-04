@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using FluentAssertions;
+﻿using FluentAssertions;
 using static CodingFlow.FluentValidation.Validations;
 
 namespace CodingFlow.FluentValidation.UnitTests;
