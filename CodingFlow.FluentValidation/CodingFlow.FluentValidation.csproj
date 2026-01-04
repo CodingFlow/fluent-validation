@@ -15,6 +15,7 @@
 	  <PackageReleaseNotes>0.1.0
 Initial release.</PackageReleaseNotes>
 	  <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+	  <Authors>Coding Flow</Authors>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
