@@ -6,22 +6,17 @@ public static class MustValidation
     {
         public FluentValidation<T> Must(Func<T, bool> predicate)
         {
-            MustValidate<T>(validation, predicate);
+            Validate(validation, predicate);
 
             return validation;
         }
     }
 
-    private static void MustValidate<T>(FluentValidation<T> validation, Func<T, bool> predicate)
+    private static void Validate<T>(FluentValidation<T> validation, Func<T, bool> predicate)
     {
-        var isValid = predicate(validation.Input);
-
-        if (!isValid)
-        {
-            validation.Result.IsValid = false;
-
-            validation.Errors.Add(
-                new ValidationError($"Value '{validation.Input}' of type {typeof(T)} is not valid."));
-        }
+        validation.Validate(
+            () => predicate(validation.Input),
+            new ValidationError($"Value '{validation.Input}' of type {typeof(T)} is not valid.")
+        );
     }
 }

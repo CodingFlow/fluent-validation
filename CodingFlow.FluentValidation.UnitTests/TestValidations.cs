@@ -8,13 +8,20 @@ public static class TestValidations
     {
         public FluentValidation<T> Valid()
         {
+            validation.Validate(
+                () => true,
+                new() { Message = ErrorMessage }
+            );
+
             return validation;
         }
 
         public FluentValidation<T> Invalid()
         {
-            validation.Result.IsValid = false;
-            validation.Errors.Add(new() { Message = ErrorMessage });
+            validation.Validate(
+                () => false,
+                new() { Message = ErrorMessage }
+            );
 
             return validation;
         }

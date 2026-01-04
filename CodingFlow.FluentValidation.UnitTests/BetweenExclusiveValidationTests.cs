@@ -3,7 +3,7 @@ using static CodingFlow.FluentValidation.Validations;
 
 namespace CodingFlow.FluentValidation.UnitTests;
 
-public class BetweenValidationTests
+public class BetweenExclusiveValidationTests
 {
     [TestCase(5)]
     public void Between_Integer_Valid(int input)

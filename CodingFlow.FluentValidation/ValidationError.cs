@@ -1,8 +1,8 @@
 ﻿namespace CodingFlow.FluentValidation;
 
-public record struct ValidationError
+public readonly record struct ValidationError
 {
-    public string Message { get; set; }
+    public string Message { get; init; }
 
     public ValidationError(string message)
     {
