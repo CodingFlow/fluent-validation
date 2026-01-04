@@ -9,7 +9,7 @@ public class BetweenValidationTests
     public void Between_Integer_Valid(int input)
     {
         var result = RuleFor(input)
-            .Between(4, 6)
+            .BetweenExclusive(4, 6)
             .Result();
 
         result.Should().BeEquivalentTo(new ValidationResult
@@ -23,7 +23,7 @@ public class BetweenValidationTests
     public void Between_Float_Valid(float input)
     {
         var result = RuleFor(input)
-            .Between(4f, 6f)
+            .BetweenExclusive(4f, 6f)
             .Result();
 
         result.Should().BeEquivalentTo(new ValidationResult
@@ -39,7 +39,7 @@ public class BetweenValidationTests
     public void Between_Integer_Invalid(int input, int minimum, int maximum)
     {
         var result = RuleFor(input)
-            .Between(minimum, maximum)
+            .BetweenExclusive(minimum, maximum)
             .Result();
 
         result.Should().BeEquivalentTo(new ValidationResult
@@ -57,7 +57,7 @@ public class BetweenValidationTests
     public void Between_Float_Invalid(float input, float minimum, float maximum)
     {
         var result = RuleFor(input)
-            .Between(minimum, maximum)
+            .BetweenExclusive(minimum, maximum)
             .Result();
 
         result.Should().BeEquivalentTo(new ValidationResult
