@@ -12,10 +12,8 @@
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
 	  <RepositoryUrl>https://github.com/CodingFlow/fluent-validation</RepositoryUrl>
 	  <PackageTags>fluent;validation;vogen</PackageTags>
-	  <PackageReleaseNotes>
-		  0.1.0
-		  Initial release.
-	  </PackageReleaseNotes>
+	  <PackageReleaseNotes>0.1.0
+    Initial release.</PackageReleaseNotes>
 	  <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 	  <Authors>Coding Flow</Authors>
   </PropertyGroup>

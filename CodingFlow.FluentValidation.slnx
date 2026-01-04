@@ -3,4 +3,5 @@
   <Project Path="CodingFlow.FluentValidation.VogenExtensions.UnitTests/CodingFlow.FluentValidation.VogenExtensions.UnitTests.csproj" />
   <Project Path="CodingFlow.FluentValidation.VogenExtensions/CodingFlow.FluentValidation.VogenExtensions.csproj" />
   <Project Path="CodingFlow.FluentValidation/CodingFlow.FluentValidation.csproj" />
+  <Project Path="Examples/Examples.csproj" Id="31b76e57-988c-453b-b235-e2a4a4f43642" />
 </Solution>
