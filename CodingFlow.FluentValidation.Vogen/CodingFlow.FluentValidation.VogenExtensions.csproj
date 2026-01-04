@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
 	  <VersionPrefix>0.1.0</VersionPrefix>
 	  <Title>CodingFlow Fluent Validation Vogen Extensions</Title>
-	  <Description>Vogen extnesions for CodingFlow Fluent Validation.</Description>
+	  <Description>Vogen extensions for CodingFlow Fluent Validation.</Description>
 	  <Copyright></Copyright>
 	  <PackageProjectUrl></PackageProjectUrl>
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -27,6 +27,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <IsAotCompatible>True</IsAotCompatible>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="CodingFlow.FluentValidation" Version="0.1.0" />
