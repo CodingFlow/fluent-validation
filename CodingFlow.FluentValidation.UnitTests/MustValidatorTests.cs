@@ -4,7 +4,7 @@ using static CodingFlow.FluentValidation.Validations;
 
 namespace CodingFlow.FluentValidation.UnitTests;
 
-public class MustValidationTests
+public class MustValidatorTests
 {
     [TestCase(5)]
     public void Must_Valid(int input)

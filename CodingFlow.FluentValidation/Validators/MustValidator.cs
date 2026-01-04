@@ -1,6 +1,6 @@
 ﻿namespace CodingFlow.FluentValidation.Validators;
 
-public static class MustValidation
+public static class MustValidator
 {
     public static FluentValidation<T> Must<T>(this FluentValidation<T> validation, Func<T, bool> predicate)
     {

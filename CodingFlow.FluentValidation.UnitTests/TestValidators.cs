@@ -1,6 +1,6 @@
 ﻿namespace CodingFlow.FluentValidation.UnitTests;
 
-public static class TestValidations
+public static class TestValidators
 {
     public const string ErrorMessage = "Test error.";
 

@@ -37,7 +37,7 @@ public class ValidationsTests
         result.Should().BeEquivalentTo(new ValidationResult
         {
             IsValid = false,
-            Errors = [new() { Message = TestValidations.ErrorMessage }]
+            Errors = [new() { Message = TestValidators.ErrorMessage }]
         });
     }
 
@@ -55,7 +55,7 @@ public class ValidationsTests
         result.Should().BeEquivalentTo(new ValidationResult
         {
             IsValid = false,
-            Errors = [new() { Message = TestValidations.ErrorMessage }]
+            Errors = [new() { Message = TestValidators.ErrorMessage }]
         });
     }
 }
