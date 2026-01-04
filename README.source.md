@@ -59,7 +59,7 @@ snippet: MustBasicExample
 
 Extensions to integrate with [Vogen](https://github.com/SteveDunn/Vogen) validation methods.
 
-To get started, install the Vogen extensions nuget package, `CodingFlow.FluentValidation.VogenExtensions`.
+To get started, install the [Vogen extensions](https://www.nuget.org/packages/CodingFlow.FluentValidation.VogenExtensions) nuget package, `CodingFlow.FluentValidation.VogenExtensions`.
 
 To get the final result of the fluent validation chain, call `VogenResult()` instead of `Result()`:
 
