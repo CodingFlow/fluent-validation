@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CodingFlow.FluentValidation.UnitTests/CodingFlow.FluentValidation.UnitTests.csproj" Id="dab72839-1338-4b9c-832e-bd824927900d" />
+  <Project Path="CodingFlow.FluentValidation.Vogen.UnitTests/CodingFlow.FluentValidation.VogenExtensions.UnitTests.csproj" Id="f04d20d0-0b23-4f92-9ee3-8fcd63212167" />
+  <Project Path="CodingFlow.FluentValidation.Vogen/CodingFlow.FluentValidation.VogenExtensions.csproj" Id="5dcc98f6-5856-4a79-a8db-ca0d65bd9a12" />
+  <Project Path="CodingFlow.FluentValidation/CodingFlow.FluentValidation.csproj" />
+</Solution>
