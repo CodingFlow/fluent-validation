@@ -1,0 +1,18 @@
+﻿using CodingFlow.FluentValidation.Validators;
+using static CodingFlow.FluentValidation.Validations;
+
+namespace Examples;
+
+internal class BetweenInclusiveBasicExample
+{
+    public void Run()
+    {
+        var input = 11;
+
+        // begin-snippet: BetweenInclusiveBasicExample
+        RuleFor(input)
+            .BetweenInclusive(6, 14)
+            .Result();
+        // end-snippet
+    }
+}

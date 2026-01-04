@@ -19,11 +19,45 @@ Then you can add validation like this:
 
 snippet: BasicExample
 
+# Validators
+
+There are several built-in validators available out-of-the-box. You can also provide your own validation logic via the [predicate validator](#predicate-validator) (aka `Must`).
+
+## NotEmpty Validator
+
+Ensures the value is not `null` for reference types or a default value for value types. For strings, ensures it is not `null`, an empty string, or only whitespace.
+
+snippet: NotEmptyBasicExample
+
+## BetweenInclusive Validator
+
+Ensures a number of any type (`int`, `float`, `double`, etc.) is greater than a minimum and less than a maximum.
+
+snippet: BetweenInclusiveBasicExample
+
+## BetweenExclusive Validator
+
+Ensures a number of any type (`int`, `float`, `double`, etc.) is greater than or equal to a minimum and less than or equal to a maximum.
+
+snippet: BetweenExclusiveBasicExample
+
+## Equal Validator
+
+Ensures the input is considered equal to the provided value. For reference types it checks if the two references are to the same instance (reference equality). For value types, it checks it the types and values are the same (value equality).
+
+snippet: EqualBasicExample
+
+## Predicate Validator
+
+The predicate (aka `Must`) validator allows you to provide your own validation logic by providing a delegate.
+
+snippet: MustBasicExample
+
 # Integrations
 
 ## Vogen
 
-Extensions to integrate with Vogen validation methods.
+Extensions to integrate with [Vogen](https://github.com/SteveDunn/Vogen) validation methods.
 
 To get started, install the Vogen extensions nuget package, `CodingFlow.FluentValidation.VogenExtensions`.
 

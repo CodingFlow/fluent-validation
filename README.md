@@ -46,11 +46,85 @@ var errors = result.Errors;
 <sup><a href='/Examples/BasicExample.cs#L12-L22' title='Snippet source file'>snippet source</a> | <a href='#snippet-BasicExample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
+# Validators
+
+There are several built-in validators available out-of-the-box. You can also provide your own validation logic via the [predicate validator](#predicate-validator) (aka `Must`).
+
+## NotEmpty Validator
+
+Ensures the value is not `null` for reference types or a default value for value types. For strings, ensures it is not `null`, an empty string, or only whitespace.
+
+<!-- snippet: NotEmptyBasicExample -->
+<a id='snippet-NotEmptyBasicExample'></a>
+```cs
+RuleFor(input)
+    .NotEmpty()
+    .Result();
+```
+<sup><a href='/Examples/NotEmptyBasicExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-NotEmptyBasicExample' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+## BetweenInclusive Validator
+
+Ensures a number of any type (`int`, `float`, `double`, etc.) is greater than a minimum and less than a maximum.
+
+<!-- snippet: BetweenInclusiveBasicExample -->
+<a id='snippet-BetweenInclusiveBasicExample'></a>
+```cs
+RuleFor(input)
+    .BetweenInclusive(6, 14)
+    .Result();
+```
+<sup><a href='/Examples/BetweenInclusiveBasicExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-BetweenInclusiveBasicExample' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+## BetweenExclusive Validator
+
+Ensures a number of any type (`int`, `float`, `double`, etc.) is greater than or equal to a minimum and less than or equal to a maximum.
+
+<!-- snippet: BetweenExclusiveBasicExample -->
+<a id='snippet-BetweenExclusiveBasicExample'></a>
+```cs
+RuleFor(input)
+    .BetweenExclusive(6, 14)
+    .Result();
+```
+<sup><a href='/Examples/BetweenExclusiveBasicExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-BetweenExclusiveBasicExample' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+## Equal Validator
+
+Ensures the input is considered equal to the provided value. For reference types it checks if the two references are to the same instance (reference equality). For value types, it checks it the types and values are the same (value equality).
+
+<!-- snippet: EqualBasicExample -->
+<a id='snippet-EqualBasicExample'></a>
+```cs
+RuleFor(input)
+    .Equal(8)
+    .Result();
+```
+<sup><a href='/Examples/EqualBasicExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-EqualBasicExample' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
+## Predicate Validator
+
+The predicate (aka `Must`) validator allows you to provide your own validation logic by providing a delegate.
+
+<!-- snippet: MustBasicExample -->
+<a id='snippet-MustBasicExample'></a>
+```cs
+RuleFor(input)
+    .Must(input => input == 7)
+    .Result();
+```
+<sup><a href='/Examples/MustBasicExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-MustBasicExample' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
 # Integrations
 
 ## Vogen
 
-Extensions to integrate with Vogen validation methods.
+Extensions to integrate with [Vogen](https://github.com/SteveDunn/Vogen) validation methods.
 
 To get started, install the Vogen extensions nuget package, `CodingFlow.FluentValidation.VogenExtensions`.
 
