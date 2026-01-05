@@ -4,6 +4,15 @@ namespace CodingFlow.FluentValidation.Validators;
 
 public static class BetweenExclusiveValidator
 {
+    /// <summary>
+    /// Ensures a number of any type (`int`, `float`, `double`, etc.) is
+    /// greater than or equal to a minimum and less than or equal to a maximum.
+    /// </summary>
+    /// <typeparam name="T">Input type.</typeparam>
+    /// <param name="validation"></param>
+    /// <param name="minimum">Minimum number of the validation range.</param>
+    /// <param name="maximum">Maximum number of the validation range.</param>
+    /// <returns></returns>
     public static FluentValidation<T> BetweenExclusive<T>(this FluentValidation<T> validation, T minimum, T maximum)
         where T : INumber<T>
     {

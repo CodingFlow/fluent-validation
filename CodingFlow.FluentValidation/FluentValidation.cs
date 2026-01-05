@@ -1,5 +1,10 @@
 ﻿namespace CodingFlow.FluentValidation;
 
+/// <summary>
+/// The returned chained object for the fluent API. Do not use the methods
+/// on this type directly.
+/// </summary>
+/// <typeparam name="T">Input type.</typeparam>
 public class FluentValidation<T>
 {
     public T Input { get; set; }
