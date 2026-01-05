@@ -106,6 +106,20 @@ RuleFor(input)
 <sup><a href='/Examples/EqualBasicExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-EqualBasicExample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
+## MinimumLength Validator
+
+Ensures the string has a minimum length.
+
+<!-- snippet: MinimumLengthExample -->
+<a id='snippet-MinimumLengthExample'></a>
+```cs
+RuleFor(input)
+    .MinimumLength(5) // Must be at least 5 characters long.
+    .Result();
+```
+<sup><a href='/Examples/MinimumLengthExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-MinimumLengthExample' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
 ## Regular Expression Validator
 
 Aka `Matches`, ensure the string passes a regular expression test.

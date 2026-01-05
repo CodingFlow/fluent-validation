@@ -47,6 +47,12 @@ Ensures the input is considered equal to the provided value. For reference types
 
 snippet: EqualBasicExample
 
+## MinimumLength Validator
+
+Ensures the string has a minimum length.
+
+snippet: MinimumLengthExample
+
 ## Regular Expression Validator
 
 Aka `Matches`, ensure the string passes a regular expression test.
