@@ -19,9 +19,9 @@ public static class MinimumLengthValidator
 
     private static void Validate(FluentValidation<string> validation, int minimum)
     {
-        validation.Validate(
-            validation => validation.Input.Length >= minimum,
-            new ValidationError($"Value '{validation.Input}' has a length less than {minimum}.")
+        validation.Internal.Validate(
+            validation => validation.Internal.Input.Length >= minimum,
+            new ValidationError($"Value '{validation.Internal.Input}' has a length less than {minimum}.")
         );
     }
 }

@@ -20,9 +20,9 @@ public static class EqualValidator
 
     private static void Validate<T>(FluentValidation<T> validation, T input)
     {
-        validation.Validate(
-            validation => validation.Input.Equals(input),
-            new ValidationError($"Value '{validation.Input}' of type {typeof(T)} is not equal to {input}.")
+        validation.Internal.Validate(
+            validation => validation.Internal.Input.Equals(input),
+            new ValidationError($"Value '{validation.Internal.Input}' of type {typeof(T)} is not equal to {input}.")
         );
     }
 }

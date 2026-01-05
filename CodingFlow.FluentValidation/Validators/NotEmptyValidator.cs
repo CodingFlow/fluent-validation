@@ -18,17 +18,17 @@ public static class NotEmptyValidator
 
     private static void Validate<T>(FluentValidation<T> validation)
     {
-        validation.Validate(
+        validation.Internal.Validate(
             validation =>
             {
                 if (typeof(T) == typeof(string))
                 {
-                    return !string.IsNullOrWhiteSpace(validation.Input as string);
+                    return !string.IsNullOrWhiteSpace(validation.Internal.Input as string);
                 }
 
-                return !EqualityComparer<T>.Default.Equals(validation.Input, default);
+                return !EqualityComparer<T>.Default.Equals(validation.Internal.Input, default);
             },
-            new ValidationError($"Value '{validation.Input}' of type {typeof(T)} is empty.")
+            new ValidationError($"Value '{validation.Internal.Input}' of type {typeof(T)} is empty.")
         );
     }
 }

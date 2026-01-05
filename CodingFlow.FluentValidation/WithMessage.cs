@@ -11,7 +11,7 @@ public static class WithExtensions
     /// <returns></returns>
     public static FluentValidation<T> WithMessage<T>(this FluentValidation<T> validation, string message)
     {
-        validation.ChangeErrorMessage(message);
+        validation.Internal.ChangeErrorMessage(message);
 
         return validation;
     }
