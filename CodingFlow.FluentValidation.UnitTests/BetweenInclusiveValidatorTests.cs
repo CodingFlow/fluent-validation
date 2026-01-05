@@ -1,5 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Numerics;
+﻿using System.Numerics;
 using CodingFlow.FluentValidation.Validators;
 using FluentAssertions;
 using static CodingFlow.FluentValidation.Validations;
