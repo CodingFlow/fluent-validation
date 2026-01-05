@@ -54,56 +54,56 @@ There are several built-in validators available out-of-the-box. You can also pro
 
 Ensures the value is not `null` for reference types or a default value for value types. For strings, ensures it is not `null`, an empty string, or only whitespace.
 
-<!-- snippet: NotEmptyBasicExample -->
-<a id='snippet-NotEmptyBasicExample'></a>
+<!-- snippet: NotEmptyExample -->
+<a id='snippet-NotEmptyExample'></a>
 ```cs
 RuleFor(input)
     .NotEmpty()
     .Result();
 ```
-<sup><a href='/Examples/NotEmptyBasicExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-NotEmptyBasicExample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/Examples/NotEmptyExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-NotEmptyExample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## BetweenInclusive Validator
 
 Ensures a number of any type (`int`, `float`, `double`, etc.) is greater than a minimum and less than a maximum.
 
-<!-- snippet: BetweenInclusiveBasicExample -->
-<a id='snippet-BetweenInclusiveBasicExample'></a>
+<!-- snippet: BetweenInclusiveExample -->
+<a id='snippet-BetweenInclusiveExample'></a>
 ```cs
 RuleFor(input)
     .BetweenInclusive(6, 14)
     .Result();
 ```
-<sup><a href='/Examples/BetweenInclusiveBasicExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-BetweenInclusiveBasicExample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/Examples/BetweenInclusiveExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-BetweenInclusiveExample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## BetweenExclusive Validator
 
 Ensures a number of any type (`int`, `float`, `double`, etc.) is greater than or equal to a minimum and less than or equal to a maximum.
 
-<!-- snippet: BetweenExclusiveBasicExample -->
-<a id='snippet-BetweenExclusiveBasicExample'></a>
+<!-- snippet: BetweenExclusiveExample -->
+<a id='snippet-BetweenExclusiveExample'></a>
 ```cs
 RuleFor(input)
     .BetweenExclusive(6, 14)
     .Result();
 ```
-<sup><a href='/Examples/BetweenExclusiveBasicExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-BetweenExclusiveBasicExample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/Examples/BetweenExclusiveExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-BetweenExclusiveExample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## Equal Validator
 
 Ensures the input is considered equal to the provided value. For reference types it checks if the two references are to the same instance (reference equality). For value types, it checks it the types and values are the same (value equality).
 
-<!-- snippet: EqualBasicExample -->
-<a id='snippet-EqualBasicExample'></a>
+<!-- snippet: EqualExample -->
+<a id='snippet-EqualExample'></a>
 ```cs
 RuleFor(input)
     .Equal(8)
     .Result();
 ```
-<sup><a href='/Examples/EqualBasicExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-EqualBasicExample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/Examples/EqualExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-EqualExample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## MinimumLength Validator
@@ -124,42 +124,42 @@ RuleFor(input)
 
 Aka `Matches`, ensure the string passes a regular expression test.
 
-<!-- snippet: MatchesBasicExample -->
-<a id='snippet-MatchesBasicExample'></a>
+<!-- snippet: MatchesExample -->
+<a id='snippet-MatchesExample'></a>
 ```cs
 RuleFor(input)
     .Matches("cat")
     .Result();
 ```
-<sup><a href='/Examples/MatchesExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-MatchesBasicExample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/Examples/MatchesExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-MatchesExample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## Predicate Validator
 
 The predicate (aka `Must`) validator allows you to provide your own validation logic by providing a delegate.
 
-<!-- snippet: MustBasicExample -->
-<a id='snippet-MustBasicExample'></a>
+<!-- snippet: MustExample -->
+<a id='snippet-MustExample'></a>
 ```cs
 RuleFor(input)
     .Must(input => input == 7)
     .Result();
 ```
-<sup><a href='/Examples/MustBasicExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-MustBasicExample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/Examples/MustExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-MustExample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## IsGuid Validator
 
 Ensures the string can be parsed into a valid GUID.
 
-<!-- snippet: IsGuidBasicExample -->
-<a id='snippet-IsGuidBasicExample'></a>
+<!-- snippet: IsGuidExample -->
+<a id='snippet-IsGuidExample'></a>
 ```cs
 RuleFor(input)
     .IsGuid()
     .Result();
 ```
-<sup><a href='/Examples/IsGuidBasicExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-IsGuidBasicExample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/Examples/IsGuidExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-IsGuidExample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 # Customizing
@@ -168,14 +168,14 @@ RuleFor(input)
 
 The `WithMessage` method can be used to change the validation error message for a validator.
 
-<!-- snippet: WithMessageBasicExample -->
-<a id='snippet-WithMessageBasicExample'></a>
+<!-- snippet: WithMessageExample -->
+<a id='snippet-WithMessageExample'></a>
 ```cs
 RuleFor(input)
     .Equal(8).WithMessage("The two numbers are not equal.")
 .Result();
 ```
-<sup><a href='/Examples/WithMessageBasicExample.cs#L13-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-WithMessageBasicExample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/Examples/WithMessageExample.cs#L13-L17' title='Snippet source file'>snippet source</a> | <a href='#snippet-WithMessageExample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 # Integrations

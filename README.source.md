@@ -27,25 +27,25 @@ There are several built-in validators available out-of-the-box. You can also pro
 
 Ensures the value is not `null` for reference types or a default value for value types. For strings, ensures it is not `null`, an empty string, or only whitespace.
 
-snippet: NotEmptyBasicExample
+snippet: NotEmptyExample
 
 ## BetweenInclusive Validator
 
 Ensures a number of any type (`int`, `float`, `double`, etc.) is greater than a minimum and less than a maximum.
 
-snippet: BetweenInclusiveBasicExample
+snippet: BetweenInclusiveExample
 
 ## BetweenExclusive Validator
 
 Ensures a number of any type (`int`, `float`, `double`, etc.) is greater than or equal to a minimum and less than or equal to a maximum.
 
-snippet: BetweenExclusiveBasicExample
+snippet: BetweenExclusiveExample
 
 ## Equal Validator
 
 Ensures the input is considered equal to the provided value. For reference types it checks if the two references are to the same instance (reference equality). For value types, it checks it the types and values are the same (value equality).
 
-snippet: EqualBasicExample
+snippet: EqualExample
 
 ## MinimumLength Validator
 
@@ -57,19 +57,19 @@ snippet: MinimumLengthExample
 
 Aka `Matches`, ensure the string passes a regular expression test.
 
-snippet: MatchesBasicExample
+snippet: MatchesExample
 
 ## Predicate Validator
 
 The predicate (aka `Must`) validator allows you to provide your own validation logic by providing a delegate.
 
-snippet: MustBasicExample
+snippet: MustExample
 
 ## IsGuid Validator
 
 Ensures the string can be parsed into a valid GUID.
 
-snippet: IsGuidBasicExample
+snippet: IsGuidExample
 
 # Customizing
 
@@ -77,7 +77,7 @@ snippet: IsGuidBasicExample
 
 The `WithMessage` method can be used to change the validation error message for a validator.
 
-snippet: WithMessageBasicExample
+snippet: WithMessageExample
 
 # Integrations
 

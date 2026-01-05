@@ -9,7 +9,7 @@ internal class MatchesExample
     {
         var input = "some string";
 
-        // begin-snippet: MatchesBasicExample
+        // begin-snippet: MatchesExample
         RuleFor(input)
             .Matches("cat")
             .Result();

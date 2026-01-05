@@ -3,15 +3,15 @@ using static CodingFlow.FluentValidation.Validations;
 
 namespace Examples;
 
-internal class NotEmptyBasicExample
+internal class IsGuidExample
 {
     public void Run()
     {
-        var input = 11;
+        var input = "some string";
 
-        // begin-snippet: NotEmptyBasicExample
+        // begin-snippet: IsGuidExample
         RuleFor(input)
-            .NotEmpty()
+            .IsGuid()
             .Result();
         // end-snippet
     }

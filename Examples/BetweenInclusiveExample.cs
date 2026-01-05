@@ -3,13 +3,13 @@ using static CodingFlow.FluentValidation.Validations;
 
 namespace Examples;
 
-internal class BetweenInclusiveBasicExample
+internal class BetweenInclusiveExample
 {
     public void Run()
     {
         var input = 11;
 
-        // begin-snippet: BetweenInclusiveBasicExample
+        // begin-snippet: BetweenInclusiveExample
         RuleFor(input)
             .BetweenInclusive(6, 14)
             .Result();

@@ -3,15 +3,15 @@ using static CodingFlow.FluentValidation.Validations;
 
 namespace Examples;
 
-internal class EqualBasicExample
+internal class BetweenExclusiveExample
 {
     public void Run()
     {
         var input = 11;
 
-        // begin-snippet: EqualBasicExample
+        // begin-snippet: BetweenExclusiveExample
         RuleFor(input)
-            .Equal(8)
+            .BetweenExclusive(6, 14)
             .Result();
         // end-snippet
     }

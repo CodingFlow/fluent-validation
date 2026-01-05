@@ -4,13 +4,13 @@ using static CodingFlow.FluentValidation.Validations;
 
 namespace Examples;
 
-internal class WithMessageBasicExample
+internal class WithMessageExample
 {
     public void Run()
     {
         var input = 11;
 
-        // begin-snippet: WithMessageBasicExample
+        // begin-snippet: WithMessageExample
         RuleFor(input)
             .Equal(8).WithMessage("The two numbers are not equal.")
         .Result();
