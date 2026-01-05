@@ -120,6 +120,20 @@ RuleFor(input)
 <sup><a href='/Examples/MinimumLengthExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-MinimumLengthExample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
+## MaximumLength Validator
+
+Ensures the string has a maximum length.
+
+<!-- snippet: MaximumLengthExample -->
+<a id='snippet-MaximumLengthExample'></a>
+```cs
+RuleFor(input)
+    .MaximumLength(5) // Must be at most 5 characters long.
+    .Result();
+```
+<sup><a href='/Examples/MinimumLengthExample - Copy.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-MaximumLengthExample' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
 ## Regular Expression Validator
 
 Aka `Matches`, ensure the string passes a regular expression test.

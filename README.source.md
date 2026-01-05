@@ -53,6 +53,12 @@ Ensures the string has a minimum length.
 
 snippet: MinimumLengthExample
 
+## MaximumLength Validator
+
+Ensures the string has a maximum length.
+
+snippet: MaximumLengthExample
+
 ## Regular Expression Validator
 
 Aka `Matches`, ensure the string passes a regular expression test.
