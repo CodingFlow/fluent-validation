@@ -106,6 +106,20 @@ RuleFor(input)
 <sup><a href='/Examples/EqualBasicExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-EqualBasicExample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
+## Regular Expression Validator
+
+Aka `Matches`, ensure the string passes a regular expression test.
+
+<!-- snippet: MatchesBasicExample -->
+<a id='snippet-MatchesBasicExample'></a>
+```cs
+RuleFor(input)
+    .Matches("cat")
+    .Result();
+```
+<sup><a href='/Examples/MatchesExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-MatchesBasicExample' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
 ## Predicate Validator
 
 The predicate (aka `Must`) validator allows you to provide your own validation logic by providing a delegate.

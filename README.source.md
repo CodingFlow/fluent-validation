@@ -47,6 +47,12 @@ Ensures the input is considered equal to the provided value. For reference types
 
 snippet: EqualBasicExample
 
+## Regular Expression Validator
+
+Aka `Matches`, ensure the string passes a regular expression test.
+
+snippet: MatchesBasicExample
+
 ## Predicate Validator
 
 The predicate (aka `Must`) validator allows you to provide your own validation logic by providing a delegate.
