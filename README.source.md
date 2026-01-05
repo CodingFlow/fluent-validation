@@ -1,7 +1,7 @@
 # CodingFlow Fluent Validation
 
 [![Nuget](https://img.shields.io/nuget/v/CodingFlow.FluentValidation)](https://www.nuget.org/packages/CodingFlow.FluentValidation)
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/CodingFlow/options-bindings-generator/pull-request.yml)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/CodingFlow/fluent-validation/pull-request.yml)
 [![Nuget](https://img.shields.io/nuget/dt/CodingFlow.FluentValidation)](https://www.nuget.org/packages/CodingFlow.FluentValidation)
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/CodingFlow)](https://github.com/sponsors/CodingFlow)
 
