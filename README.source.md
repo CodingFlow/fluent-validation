@@ -31,13 +31,13 @@ snippet: NotEmptyExample
 
 ## BetweenInclusive Validator
 
-Ensures a number of any type (`int`, `float`, `double`, etc.) is greater than a minimum and less than a maximum.
+Ensures a number of any type (`int`, `float`, `double`, etc.) is greater than or equal to a minimum and less than or equal to a maximum.
 
 snippet: BetweenInclusiveExample
 
 ## BetweenExclusive Validator
 
-Ensures a number of any type (`int`, `float`, `double`, etc.) is greater than or equal to a minimum and less than or equal to a maximum.
+Ensures a number of any type (`int`, `float`, `double`, etc.) is greater than a minimum and less than a maximum.
 
 snippet: BetweenExclusiveExample
 

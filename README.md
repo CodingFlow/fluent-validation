@@ -66,7 +66,7 @@ RuleFor(input)
 
 ## BetweenInclusive Validator
 
-Ensures a number of any type (`int`, `float`, `double`, etc.) is greater than a minimum and less than a maximum.
+Ensures a number of any type (`int`, `float`, `double`, etc.) is greater than or equal to a minimum and less than or equal to a maximum.
 
 <!-- snippet: BetweenInclusiveExample -->
 <a id='snippet-BetweenInclusiveExample'></a>
@@ -80,7 +80,7 @@ RuleFor(input)
 
 ## BetweenExclusive Validator
 
-Ensures a number of any type (`int`, `float`, `double`, etc.) is greater than or equal to a minimum and less than or equal to a maximum.
+Ensures a number of any type (`int`, `float`, `double`, etc.) is greater than a minimum and less than a maximum.
 
 <!-- snippet: BetweenExclusiveExample -->
 <a id='snippet-BetweenExclusiveExample'></a>
