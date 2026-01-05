@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CodingFlow.FluentValidation.VogenExtensions\CodingFlow.FluentValidation.VogenExtensions.csproj" />
+    <ProjectReference Include="..\CodingFlow.FluentValidation\CodingFlow.FluentValidation.csproj" />
   </ItemGroup>
 
 </Project>

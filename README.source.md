@@ -53,6 +53,12 @@ The predicate (aka `Must`) validator allows you to provide your own validation l
 
 snippet: MustBasicExample
 
+## IsGuid Validator
+
+Ensures the string can be parsed into a valid GUID.
+
+snippet: IsGuidBasicExample
+
 # Customizing
 
 ## Custom Error Messages

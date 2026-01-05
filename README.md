@@ -120,6 +120,20 @@ RuleFor(input)
 <sup><a href='/Examples/MustBasicExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-MustBasicExample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
+## IsGuid Validator
+
+Ensures the string can be parsed into a valid GUID.
+
+<!-- snippet: IsGuidBasicExample -->
+<a id='snippet-IsGuidBasicExample'></a>
+```cs
+RuleFor(input)
+    .IsGuid()
+    .Result();
+```
+<sup><a href='/Examples/IsGuidBasicExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-IsGuidBasicExample' title='Start of snippet'>anchor</a></sup>
+<!-- endSnippet -->
+
 # Customizing
 
 ## Custom Error Messages
