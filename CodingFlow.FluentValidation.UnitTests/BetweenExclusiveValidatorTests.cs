@@ -1,4 +1,5 @@
-﻿using CodingFlow.FluentValidation.Validators;
+﻿using System.Numerics;
+using CodingFlow.FluentValidation.Validators;
 using FluentAssertions;
 using static CodingFlow.FluentValidation.Validations;
 
@@ -6,11 +7,26 @@ namespace CodingFlow.FluentValidation.UnitTests;
 
 public class BetweenExclusiveValidatorTests
 {
-    [TestCase(5)]
-    public void Between_Integer_Valid(int input)
+    private static readonly object[] BetweenExclusive_Valid_Cases = [
+        new short[] { 5, 4, 6 },
+        new ushort[] { 5, 4, 6 },
+        new sbyte[] { 5, 4, 6 },
+        new byte[] { 5, 4, 6 },
+        new decimal[] { 5.5m, 5.4m, 5.6m },
+    ];
+
+    [TestCase(5, 4, 6)]
+    [TestCase(5u, 4u, 6u)]
+    [TestCase(5L, 4L, 6L)]
+    [TestCase(5ul, 4ul, 6ul)]
+    [TestCase(5.5f, 5.4f, 5.6f)]
+    [TestCase(5.5d, 5.4d, 5.6d)]
+    [TestCaseSource(nameof(BetweenExclusive_Valid_Cases))]
+    public void BetweenExclusive_Valid<T>(T input, T minimum, T maximum)
+        where T : INumber<T>
     {
         var result = RuleFor(input)
-            .BetweenExclusive(4, 6)
+            .BetweenExclusive(minimum, maximum)
             .Result();
 
         result.Should().BeEquivalentTo(new ValidationResult
@@ -20,42 +36,32 @@ public class BetweenExclusiveValidatorTests
         });
     }
 
-    [TestCase(5f)]
-    public void Between_Float_Valid(float input)
-    {
-        var result = RuleFor(input)
-            .BetweenExclusive(4f, 6f)
-            .Result();
+    private static readonly object[] BetweenExclusive_Invalid_Cases = [
+        new short[] { 4, 4, 6 },
+        new short[] { 6, 4, 6 },
 
-        result.Should().BeEquivalentTo(new ValidationResult
-        {
-            IsValid = true,
-            Errors = []
-        });
-    }
+        new ushort[] { 4, 4, 6 },
+        new ushort[] { 6, 4, 6 },
 
-    [TestCase(4, 4, 6)]
-    [TestCase(6, 4, 6)]
-    [TestCase(-1, 4, 6)]
-    public void Between_Integer_Invalid(int input, int minimum, int maximum)
-    {
-        var result = RuleFor(input)
-            .BetweenExclusive(minimum, maximum)
-            .Result();
+        new sbyte[] { 4, 4, 6 },
+        new sbyte[] { 6, 4, 6 },
 
-        result.Should().BeEquivalentTo(new ValidationResult
-        {
-            IsValid = false,
-            Errors = [
-                new() { Message = $"Value '{input}' of type System.Int32 is not between {minimum} and {maximum}."}
-            ]
-        });
-    }
+        new byte[] { 4, 4, 6 },
+        new byte[] { 6, 4, 6 },
 
-    [TestCase(4f, 4f, 6f)]
-    [TestCase(6f, 4f, 6f)]
-    [TestCase(-1f, 4f, 6f)]
-    public void Between_Float_Invalid(float input, float minimum, float maximum)
+        new decimal[] { 5.4m, 5.4m, 5.6m },
+        new decimal[] { 5.6m, 5.4m, 5.6m },
+    ];
+
+    [TestCase(4, 4, 6)] [TestCase(6, 4, 6)]
+    [TestCase(4u, 4u, 6u)] [TestCase(6u, 4u, 6u)]
+    [TestCase(4L, 4L, 6L)] [TestCase(6L, 4L, 6L)]
+    [TestCase(4ul, 4ul, 6ul)] [TestCase(6ul, 4ul, 6ul)]
+    [TestCase(5.4f, 5.4f, 5.6f)] [TestCase(5.6f, 5.4f, 5.6f)]
+    [TestCase(5.4d, 5.4d, 5.6d)] [TestCase(5.6d, 5.4d, 5.6d)]
+    [TestCaseSource(nameof(BetweenExclusive_Invalid_Cases))]
+    public void BetweenExclusive_Invalid<T>(T input, T minimum, T maximum)
+        where T : INumber<T>
     {
         var result = RuleFor(input)
             .BetweenExclusive(minimum, maximum)
@@ -65,7 +71,7 @@ public class BetweenExclusiveValidatorTests
         {
             IsValid = false,
             Errors = [
-                new() { Message = $"Value '{input}' of type System.Single is not between {minimum} and {maximum}."}
+                new() { Message = $"Value '{input}' of type {typeof(T)} is not between {minimum} and {maximum}."}
             ]
         });
     }
