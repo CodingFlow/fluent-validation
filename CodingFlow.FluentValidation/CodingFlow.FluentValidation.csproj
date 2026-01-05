@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	  <VersionPrefix>0.2.1</VersionPrefix>
+	  <VersionPrefix>0.2.2</VersionPrefix>
 	  <Title>CodingFlow Fluent Validation</Title>
 	  <Description>Minimal, easy to use fluent validations API inspired by FluentValidation.</Description>
 	  <Copyright></Copyright>
@@ -12,7 +12,9 @@
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
 	  <RepositoryUrl>https://github.com/CodingFlow/fluent-validation</RepositoryUrl>
 	  <PackageTags>fluent;validation</PackageTags>
-	  <PackageReleaseNotes>0.2.1
+	  <PackageReleaseNotes>0.2.2
+- Fix minor documentation issue.
+0.2.1
 - Include documentation comments in nuget package.
 0.2.0
 - Added several validators.
