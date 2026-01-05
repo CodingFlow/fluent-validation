@@ -131,7 +131,7 @@ RuleFor(input)
     .MaximumLength(5) // Must be at most 5 characters long.
     .Result();
 ```
-<sup><a href='/Examples/MinimumLengthExample - Copy.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-MaximumLengthExample' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/Examples/MaximumLengthExample.cs#L12-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-MaximumLengthExample' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 ## Regular Expression Validator
