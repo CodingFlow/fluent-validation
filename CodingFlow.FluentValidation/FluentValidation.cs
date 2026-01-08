@@ -4,7 +4,7 @@
 /// The returned chained object for the fluent API.
 /// </summary>
 /// <typeparam name="T">Input type.</typeparam>
-public record struct FluentValidation<T>
+public class FluentValidation<T>
 {
     internal ValidationResult Result { get; init; }
 

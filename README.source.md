@@ -7,7 +7,7 @@
 
 Minimal, easy to use fluent validations API inspired by [FluentValidation](https://github.com/FluentValidation/FluentValidation).
 
-When you need to validate any type, even primitives in an easy and direct way, this library fits the bill. FluentValidation by Jeremy Skinner requires creating a separate validator class to register validation rules, and then instantiating the validator class. This library on the other hand, let's you add validation directly. This library is also ~ 25% faster performance-wise (See [performance benchmark](#performance-benchmark-comparison-with-fluentvalidation)).
+When you need to validate any type, even primitives in an easy and direct way, this library fits the bill. FluentValidation by Jeremy Skinner requires creating a separate validator class to register validation rules, and then instantiating the validator class. This library on the other hand, let's you add validation directly. This library is also ~ 20% faster performance-wise (See [performance benchmark](#performance-benchmark-comparison-with-fluentvalidation)).
 
 # Usage
 
@@ -99,8 +99,8 @@ snippet: VogenExample
 
 # Performance Benchmark Comparison with FluentValidation
 
-Benchmark of inclusive between validator shows this library is ~ 25% faster
-than FluentValidation.
+Benchmark of inclusive between validator shows this library is ~ 20 - 25% faster
+than FluentValidation in .NET 9 and .NET 10.
 
 ```
 BenchmarkDotNet v0.15.8, Windows 11 (10.0.26200.7462/25H2/2025Update/HudsonValley2)
@@ -111,15 +111,15 @@ Intel Core Ultra 5 245KF 4.20GHz, 1 CPU, 14 logical and 14 physical cores
   .NET 8.0  : .NET 8.0.22 (8.0.22, 8.0.2225.52707), X64 RyuJIT x86-64-v3
   .NET 9.0  : .NET 9.0.11 (9.0.11, 9.0.1125.51716), X64 RyuJIT x86-64-v3
 ```
-
 | Method           | Job       | Runtime   | Mean     | Error    | StdDev   | Gen0   | Gen1   | Allocated |
 |----------------- |---------- |---------- |---------:|---------:|---------:|-------:|-------:|----------:|
-| CodingFlow       | .NET 10.0 | .NET 10.0 | 34.58 ns | 0.154 ns | 0.144 ns | 0.0249 |      - |     312 B |
-| FluentValidation | .NET 10.0 | .NET 10.0 | 46.73 ns | 0.527 ns | 0.493 ns | 0.0471 | 0.0001 |     592 B |
-| CodingFlow       | .NET 8.0  | .NET 8.0  | 42.22 ns | 0.418 ns | 0.391 ns | 0.0249 |      - |     312 B |
-| FluentValidation | .NET 8.0  | .NET 8.0  | 52.87 ns | 0.390 ns | 0.365 ns | 0.0471 | 0.0001 |     592 B |
-| CodingFlow       | .NET 9.0  | .NET 9.0  | 35.42 ns | 0.211 ns | 0.187 ns | 0.0249 |      - |     312 B |
-| FluentValidation | .NET 9.0  | .NET 9.0  | 48.73 ns | 0.175 ns | 0.164 ns | 0.0471 | 0.0001 |     592 B |
+| CodingFlow       | .NET 10.0 | .NET 10.0 | 34.70 ns | 0.338 ns | 0.316 ns | 0.0235 |      - |     296 B |
+| FluentValidation | .NET 10.0 | .NET 10.0 | 46.42 ns | 0.228 ns | 0.213 ns | 0.0471 | 0.0001 |     592 B |
+| CodingFlow       | .NET 8.0  | .NET 8.0  | 47.44 ns | 0.538 ns | 0.503 ns | 0.0287 |      - |     360 B |
+| FluentValidation | .NET 8.0  | .NET 8.0  | 52.02 ns | 0.387 ns | 0.323 ns | 0.0471 | 0.0001 |     592 B |
+| CodingFlow       | .NET 9.0  | .NET 9.0  | 37.48 ns | 0.149 ns | 0.139 ns | 0.0287 |      - |     360 B |
+| FluentValidation | .NET 9.0  | .NET 9.0  | 48.27 ns | 0.499 ns | 0.467 ns | 0.0471 | 0.0001 |     592 B |
+
 
 Benchmark code:
 
