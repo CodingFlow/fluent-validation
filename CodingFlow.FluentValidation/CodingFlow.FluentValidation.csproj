@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	  <VersionPrefix>0.3.0</VersionPrefix>
+	  <VersionPrefix>0.3.1</VersionPrefix>
 	  <Title>CodingFlow Fluent Validation</Title>
 	  <Description>Minimal, easy to use fluent validations API inspired by FluentValidation.</Description>
 	  <Copyright></Copyright>
@@ -12,10 +12,8 @@
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
 	  <RepositoryUrl>https://github.com/CodingFlow/fluent-validation</RepositoryUrl>
 	  <PackageTags>fluent;validation</PackageTags>
-	  <PackageReleaseNotes>0.3.0
-- Performance improvements.
-- Stopped exposing internal properties and methods.
-- Performance benchmark comparison with FluentValidation.</PackageReleaseNotes>
+	  <PackageReleaseNotes>0.3.1
+- Fix reference bug introduced by performance optimization.</PackageReleaseNotes>
 	  <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 	  <Authors>Coding Flow</Authors>
 	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
