@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	  <VersionPrefix>0.2.2</VersionPrefix>
+	  <VersionPrefix>0.3.0</VersionPrefix>
 	  <Title>CodingFlow Fluent Validation Vogen Extensions</Title>
 	  <Description>Vogen extensions for CodingFlow Fluent Validation.</Description>
 	  <Copyright></Copyright>
@@ -12,14 +12,9 @@
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
 	  <RepositoryUrl>https://github.com/CodingFlow/fluent-validation</RepositoryUrl>
 	  <PackageTags>fluent;validation;vogen</PackageTags>
-	  <PackageReleaseNotes>0.2.2
-- Update to version 0.2.2 of base library.
-0.2.1
-- Include documentation comments in nuget package.
-0.2.0
-- Updated to version 0.2.0 of base library.
-0.1.0
-    Initial release.</PackageReleaseNotes>
+	  <PackageReleaseNotes>0.3.0
+- Update to latest version of base library.
+- Internal refactoring.</PackageReleaseNotes>
 	  <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 	  <Authors>Coding Flow</Authors>
 	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
