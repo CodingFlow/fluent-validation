@@ -12,16 +12,10 @@
 	  <PackageReadmeFile>README.md</PackageReadmeFile>
 	  <RepositoryUrl>https://github.com/CodingFlow/fluent-validation</RepositoryUrl>
 	  <PackageTags>fluent;validation</PackageTags>
-	  <PackageReleaseNotes>0.2.2
-- Fix minor documentation issue.
-0.2.1
-- Include documentation comments in nuget package.
-0.2.0
-- Added several validators.
-- Added documentation.
-- Reduced expose of internally used properties and methods.
-0.1.0
-Initial release.</PackageReleaseNotes>
+	  <PackageReleaseNotes>0.3.0
+- Performance improvements.
+- Stopped exposing internal properties and methods.
+- Performance benchmark comparison with FluentValidation.</PackageReleaseNotes>
 	  <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 	  <Authors>Coding Flow</Authors>
 	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
