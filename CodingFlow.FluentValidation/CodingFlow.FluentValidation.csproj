@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	  <VersionPrefix>0.2.2</VersionPrefix>
+	  <VersionPrefix>0.3.0</VersionPrefix>
 	  <Title>CodingFlow Fluent Validation</Title>
 	  <Description>Minimal, easy to use fluent validations API inspired by FluentValidation.</Description>
 	  <Copyright></Copyright>
