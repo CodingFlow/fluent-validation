@@ -5,7 +5,7 @@ namespace CodingFlow.FluentValidation.VogenExtensions;
 public static class VogenValidations
 {
     /// <summary>
-    /// Creates the validation results for the validation chain and returns it
+    /// Creates the validation results for the validation chain and returns
     /// Vogen pass or fail types.
     /// </summary>
     /// <typeparam name="R">Input type.</typeparam>
@@ -14,10 +14,10 @@ public static class VogenValidations
     /// validation fails a <see cref="Validation.Invalid(string)"/>.</returns>
     public static Validation VogenResult<R>(this FluentValidation<R> validation)
     {
-        validation.Result = validation.Result();
+        var result = validation.Result();
 
-        return validation.Result.IsValid
+        return result.IsValid
             ? Validation.Ok
-            : Validation.Invalid(validation.Result.Errors.First().Message);
+            : Validation.Invalid(result.Errors.First().Message);
     }
 }

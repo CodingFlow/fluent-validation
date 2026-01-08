@@ -1,4 +1,5 @@
-﻿using FluentAssertions;
+﻿using CodingFlow.FluentValidation.Validators;
+using FluentAssertions;
 using static CodingFlow.FluentValidation.Validations;
 
 namespace CodingFlow.FluentValidation.VogenExtensions.UnitTests;
@@ -9,21 +10,22 @@ public class VogenValidationsTests
     public void Between_Float_Valid<T>(T input)
     {
         var result = RuleFor(input)
-            .Valid()
+            .Must(_ => true)
             .VogenResult();
 
         result.Should().BeEquivalentTo(Vogen.Validation.Ok);
     }
+
+    private const string ErrorMessage = "Test error.";
 
     [TestCase(4f)]
     [TestCase("test string")]
     public void Between_Float_Invalid<T>(T input)
     {
         var result = RuleFor(input)
-            .Invalid()
+            .Must(_ => false).WithMessage(ErrorMessage)
             .VogenResult();
 
-        result.Should().BeEquivalentTo(
-            Vogen.Validation.Invalid(TestValidations.ErrorMessage));
+        result.Should().BeEquivalentTo(Vogen.Validation.Invalid(ErrorMessage));
     }
 }
