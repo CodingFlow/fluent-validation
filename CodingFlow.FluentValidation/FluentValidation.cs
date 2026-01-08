@@ -6,9 +6,9 @@
 /// <typeparam name="T">Input type.</typeparam>
 public record struct FluentValidation<T>
 {
-    public ValidationResult Result { get; init; }
+    internal ValidationResult Result { get; init; }
 
-    public List<ValidationError> Errors { get; init; } = [];
+    internal List<ValidationError> Errors { get; init; } = [];
 
     internal T Input { get; private init; }
 

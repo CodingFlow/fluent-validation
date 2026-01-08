@@ -2,6 +2,7 @@
 
 namespace PerformanceBenchmarks;
 
+// begin-snippet: IntegerValidator
 internal class IntegerValidator : AbstractValidator<int>
 {
     public IntegerValidator()
@@ -9,3 +10,4 @@ internal class IntegerValidator : AbstractValidator<int>
         RuleFor(x => x).InclusiveBetween(1, 7);
     }
 }
+// end-snippet
