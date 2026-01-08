@@ -8,7 +8,7 @@ public static class TestValidators
     {
         public FluentValidation<T> Valid()
         {
-            validation.Internal.Validate(
+            validation.Validate(
                 _ => true,
                 new() { Message = ErrorMessage }
             );
@@ -18,7 +18,7 @@ public static class TestValidators
 
         public FluentValidation<T> Invalid()
         {
-            validation.Internal.Validate(
+            validation.Validate(
                 _ => false,
                 new() { Message = ErrorMessage }
             );

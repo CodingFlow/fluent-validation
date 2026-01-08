@@ -24,9 +24,9 @@ public static class BetweenExclusiveValidator
     private static void Validate<T>(FluentValidation<T> validation, T minimum, T maximum)
         where T : INumber<T>
     {
-        validation.Internal.Validate(
-            @internal => minimum < @internal.Input && @internal.Input < maximum,
-            new ValidationError($"Value '{validation.Internal.Input}' of type {typeof(T)} is not between {minimum} and {maximum}.")
+        validation.Validate(
+            validation => minimum < validation.Input && validation.Input < maximum,
+            new ValidationError($"Value '{validation.Input}' of type {typeof(T)} is not between {minimum} and {maximum}.")
         );
     }
 }

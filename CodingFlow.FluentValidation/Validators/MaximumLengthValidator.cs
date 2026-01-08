@@ -19,9 +19,9 @@ public static class MaximumLengthValidator
 
     private static void Validate(FluentValidation<string> validation, int maximum)
     {
-        validation.Internal.Validate(
-            @internal => @internal.Input.Length <= maximum,
-            new ValidationError($"Value '{validation.Internal.Input}' has a length more than {maximum}.")
+        validation.Validate(
+            validatin => validatin.Input.Length <= maximum,
+            new ValidationError($"Value '{validation.Input}' has a length more than {maximum}.")
         );
     }
 }

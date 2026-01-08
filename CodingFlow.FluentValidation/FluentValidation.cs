@@ -4,21 +4,56 @@
 /// The returned chained object for the fluent API.
 /// </summary>
 /// <typeparam name="T">Input type.</typeparam>
-public class FluentValidation<T>
+public record struct FluentValidation<T>
 {
     public ValidationResult Result { get; init; }
 
     public List<ValidationError> Errors { get; init; } = [];
 
-    internal Internal<T> Internal { get; private init; }
+    internal T Input { get; private init; }
+
+    private ValidationError LastError { get; set; }
 
     public FluentValidation(T input)
     {
         Result = new() { Errors = Errors };
-        
-        Internal = new Internal<T>(this)
+
+        Input = input;
+    }
+
+    internal void Validate(Func<FluentValidation<T>, bool> validator, ValidationError error)
+    {
+        if (validator(this))
         {
-            Input = input
-        };
+            AddValid();
+        }
+        else
+        {
+            AddError(error);
+        }
+    }
+
+    internal void ChangeErrorMessage(string message)
+    {
+        if (LastError != default)
+        {
+            Errors.RemoveAt(Errors.Count - 1);
+            Errors.Add(LastError with
+            {
+                Message = message
+            });
+        }
+    }
+
+    private void AddValid()
+    {
+        LastError = default;
+    }
+
+    private void AddError(ValidationError error)
+    {
+        Result.IsValid = false;
+        LastError = error;
+        Errors.Add(error);
     }
 }

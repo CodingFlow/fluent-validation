@@ -5,6 +5,10 @@
 /// </summary>
 public record ValidationResult
 {
+    public ValidationResult()
+    {
+    }
+
     /// <summary>
     /// Indicates if the validation succeeded or failed.
     /// <c>true</c> indicates success. <c>false</c> indicate failure.

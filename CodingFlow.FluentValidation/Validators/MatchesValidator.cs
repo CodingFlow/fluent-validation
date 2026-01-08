@@ -21,9 +21,9 @@ public static class MatchesValidator
 
     private static void Validate(FluentValidation<string> validation, string regex)
     {
-        validation.Internal.Validate(
-            @internal => Regex.IsMatch(@internal.Input, regex),
-            new ValidationError($"Value '{validation.Internal.Input}' does not match the pattern.")
+        validation.Validate(
+            validation => Regex.IsMatch(validation.Input, regex),
+            new ValidationError($"Value '{validation.Input}' does not match the pattern.")
         );
     }
 }

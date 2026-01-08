@@ -18,9 +18,9 @@ public static class IsGuidValidator
 
     private static void Validate(FluentValidation<string> validation)
     {
-        validation.Internal.Validate(
-            @internal => Guid.TryParse(@internal.Input, out var value),
-            new ValidationError($"Value '{validation.Internal.Input}' is not a valid GUID.")
+        validation.Validate(
+            validation => Guid.TryParse(validation.Input, out var value),
+            new ValidationError($"Value '{validation.Input}' is not a valid GUID.")
         );
     }
 }
