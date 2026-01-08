@@ -20,7 +20,7 @@ public static class MustValidator
     private static void Validate<T>(FluentValidation<T> validation, Func<T, bool> predicate)
     {
         validation.Internal.Validate(
-            validation => predicate(validation.Internal.Input),
+            @internal => predicate(@internal.Input),
             new ValidationError($"Value '{validation.Internal.Input}' of type {typeof(T)} is not valid.")
         );
     }

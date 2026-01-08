@@ -1,26 +1,14 @@
 ﻿namespace CodingFlow.FluentValidation;
 
-public class Internal<T>(FluentValidation<T> validation)
+internal class Internal<T>(FluentValidation<T> validation)
 {
     public required T Input { get; set; }
 
-    public ValidationError LastError { get; private set; }
+    private ValidationError LastError { get; set; }
 
-    public void AddValid()
+    public void Validate(Func<Internal<T>, bool> validator, ValidationError error)
     {
-        LastError = default;
-    }
-
-    public void AddError(ValidationError error)
-    {
-        validation.Result.IsValid = false;
-        LastError = error;
-        validation.Errors.Add(error);
-    }
-
-    public void Validate(Func<FluentValidation<T>, bool> validator, ValidationError error)
-    {
-        if (validator(validation))
+        if (validator(this))
         {
             AddValid();
         }
@@ -40,5 +28,17 @@ public class Internal<T>(FluentValidation<T> validation)
                 Message = message
             });
         }
+    }
+
+    private void AddValid()
+    {
+        LastError = default;
+    }
+
+    private void AddError(ValidationError error)
+    {
+        validation.Result.IsValid = false;
+        LastError = error;
+        validation.Errors.Add(error);
     }
 }

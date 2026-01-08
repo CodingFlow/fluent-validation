@@ -6,15 +6,11 @@
 /// <typeparam name="T">Input type.</typeparam>
 public class FluentValidation<T>
 {
-    public ValidationResult Result { get; set; }
+    public ValidationResult Result { get; init; }
 
     public List<ValidationError> Errors { get; init; } = [];
 
-    /// <summary>
-    /// Used internally by the library. Do not use this property
-    /// unless you are building your own validator.
-    /// </summary>
-    public Internal<T> Internal { get; private set; }
+    internal Internal<T> Internal { get; private init; }
 
     public FluentValidation(T input)
     {

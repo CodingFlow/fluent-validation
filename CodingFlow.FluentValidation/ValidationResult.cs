@@ -16,5 +16,5 @@ public record ValidationResult
     /// Collection of validation errors if the validation failed.
     /// This collection will be empty if the validation succeeded.
     /// </summary>
-    public IEnumerable<ValidationError> Errors { get; set; }
+    public required IEnumerable<ValidationError> Errors { get; set; }
 }

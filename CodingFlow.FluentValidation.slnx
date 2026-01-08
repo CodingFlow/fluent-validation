@@ -4,4 +4,5 @@
   <Project Path="CodingFlow.FluentValidation.VogenExtensions/CodingFlow.FluentValidation.VogenExtensions.csproj" />
   <Project Path="CodingFlow.FluentValidation/CodingFlow.FluentValidation.csproj" />
   <Project Path="Examples/Examples.csproj" Id="31b76e57-988c-453b-b235-e2a4a4f43642" />
+  <Project Path="PerformanceBenchmarks/PerformanceBenchmarks.csproj" Id="8f1c4ea4-e0ee-4a83-8ba8-6880ea26cba2" />
 </Solution>

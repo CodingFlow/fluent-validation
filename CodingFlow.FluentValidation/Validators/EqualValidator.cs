@@ -21,7 +21,7 @@ public static class EqualValidator
     private static void Validate<T>(FluentValidation<T> validation, T input)
     {
         validation.Internal.Validate(
-            validation => validation.Internal.Input.Equals(input),
+            @internal => @internal.Input.Equals(input),
             new ValidationError($"Value '{validation.Internal.Input}' of type {typeof(T)} is not equal to {input}.")
         );
     }

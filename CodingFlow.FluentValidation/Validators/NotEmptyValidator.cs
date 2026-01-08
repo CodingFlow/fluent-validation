@@ -19,14 +19,14 @@ public static class NotEmptyValidator
     private static void Validate<T>(FluentValidation<T> validation)
     {
         validation.Internal.Validate(
-            validation =>
+            @internal =>
             {
                 if (typeof(T) == typeof(string))
                 {
-                    return !string.IsNullOrWhiteSpace(validation.Internal.Input as string);
+                    return !string.IsNullOrWhiteSpace(@internal.Input as string);
                 }
 
-                return !EqualityComparer<T>.Default.Equals(validation.Internal.Input, default);
+                return !EqualityComparer<T>.Default.Equals(@internal.Input, default);
             },
             new ValidationError($"Value '{validation.Internal.Input}' of type {typeof(T)} is empty.")
         );
